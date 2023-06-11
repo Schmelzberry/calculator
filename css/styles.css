@@ -51,11 +51,11 @@ word-break: break-all;
 
 .output .previous-operand {
     color: rgba(255,255,255,.75);
-    font-size: 1.5rem;
+    font-size: 30px;
 }
     .output .current-operand {
         color: white;
-        font-size: .5rem;
+        font-size: 50px;
 
 
 }
