@@ -1,5 +1,3 @@
-// Business logic
-
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement
@@ -7,33 +5,33 @@ class Calculator {
         this.clear() 
     }
 
+
     clear() {
         this.currentOperand = ''
         this.previousOperand = ''
         this.operation = undefined
      }
+    
 
     delete() {
 
     }
 
     appendNumber(number) {
-        this.currentOperand = number
+        this.currentOperand = number;
+     }
 
-    }
-    chooseOperation(operation) {
-
-    }
 
     compute() {
 
     }
 
     updateDisplay() {
-        this.currentOperandTextElement.innertext = this.currentOperand
+        this.currentOperandTextElement.innerText = this.currentOperand
 
     }
 }
+
 
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
@@ -46,7 +44,7 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 numberButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', ()=> {
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
     })
